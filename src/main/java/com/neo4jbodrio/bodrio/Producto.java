@@ -19,8 +19,9 @@ import java.util.List;
         private String nombre;
         private double precio;
 
-        @Relationship(type = "RECOMIENDA")
-        private List<Producto> recomendados = new ArrayList<>();
+    @Relationship(type = "RECOMENDADO", direction = Relationship.Direction.OUTGOING)
+    private List<Producto> recomendados = new ArrayList<>();
+
 
     public Producto() {
     }
